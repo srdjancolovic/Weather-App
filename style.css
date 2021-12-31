@@ -1,0 +1,754 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  overflow: hidden;
+}
+
+.preload {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  z-index: 3000;
+  background: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+  text-align: center;
+}
+
+.preload .preload-text {
+  text-transform: uppercase;
+  font-size: 30px;
+}
+
+.preload .close-preload {
+  margin-top: 30px;
+  font-size: 25px;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  border-radius: 20px;
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
+  opacity: 0;
+  background: black;
+  color: white;
+  cursor: pointer;
+}
+
+.preload .close-preload:focus {
+  outline: none;
+}
+
+.preload .close-preload:hover {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
+.app-body {
+  background: rgba(0, 0, 0, 0.3);
+  text-align: center;
+  width: 1000px;
+  overflow-x: hidden;
+  border: 3px solid rgba(255, 253, 253, 0.5);
+  border-radius: 10px;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 1000;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.app-body .current {
+  width: 50%;
+}
+
+.app-body .current .search-bar {
+  padding-top: 40px;
+  margin: auto;
+  position: relative;
+  z-index: 2000;
+  border-right: 2px solid rgba(255, 253, 253, 0.5);
+}
+
+.app-body .current .search-bar input {
+  background: rgba(255, 254, 254, 0.3);
+  width: 300px;
+  height: 35px;
+  border: white;
+  border-radius: 10px;
+  padding: 0 20px;
+  text-align: center;
+  text-transform: uppercase;
+  font-style: italic;
+  letter-spacing: 0.5px;
+  color: white;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+}
+
+.app-body .current .search-bar input::-webkit-input-placeholder {
+  color: white;
+}
+
+.app-body .current .search-bar input:-ms-input-placeholder {
+  color: white;
+}
+
+.app-body .current .search-bar input::-ms-input-placeholder {
+  color: white;
+}
+
+.app-body .current .search-bar input::placeholder {
+  color: white;
+}
+
+.app-body .current .search-bar input:focus {
+  outline: none;
+}
+
+.app-body .current .search-bar input:hover {
+  background: rgba(255, 254, 254, 0.5);
+}
+
+.app-body .current .search-bar .svg-inline--fa {
+  position: absolute;
+  top: 42.5px;
+  color: white;
+  margin-left: 10px;
+  font-size: 25px;
+  cursor: pointer;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+.app-body .current .search-bar .svg-inline--fa:hover {
+  -webkit-transform: scale(0.85);
+          transform: scale(0.85);
+}
+
+.app-body .current .current-day {
+  padding-top: 30px;
+  border-right: 2px solid rgba(255, 253, 253, 0.5);
+}
+
+.app-body .current .current-day .city-name {
+  text-transform: uppercase;
+  font-size: 33px;
+  font-style: bold;
+  letter-spacing: 1px;
+}
+
+.app-body .current .current-day .temp {
+  padding-top: 15px;
+  font-size: 55px;
+  font-style: italic;
+  letter-spacing: 1px;
+}
+
+.app-body .current .current-day .min-max {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 15px 30px;
+  margin: auto;
+  border-bottom: 2px solid rgba(255, 253, 253, 0.5);
+}
+
+.app-body .current .current-day .min-max p {
+  font-size: 25px;
+  letter-spacing: 1px;
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+
+.app-body .current .current-day .min-max p span {
+  font-weight: bold;
+  font-style: italic;
+  font-size: 35px;
+  letter-spacing: 0.5px;
+}
+
+.app-body .current .current-day .desc-and-icon {
+  padding-bottom: 30px;
+}
+
+.app-body .current .current-day .desc-and-icon .weather-desc {
+  padding-top: 30px;
+  text-transform: uppercase;
+  font-size: 25px;
+  letter-spacing: 0.7px;
+}
+
+.app-body .current .current-day .more-info {
+  height: 240px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-top: 2px solid rgba(255, 253, 253, 0.5);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.app-body .current .current-day .more-info .sunrise-sunset {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 15px 30px;
+}
+
+.app-body .current .current-day .more-info .sunrise-sunset p {
+  font-size: 23px;
+  letter-spacing: 1px;
+}
+
+.app-body .current .current-day .more-info .sunrise-sunset p span {
+  font-weight: bold;
+  font-style: italic;
+  font-size: 28px;
+  letter-spacing: 0.5px;
+}
+
+.app-body .current .current-day .more-info .sunrise-sunset p span {
+  text-transform: uppercase;
+}
+
+.app-body .current .current-day .more-info .pressure-humidity {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 15px 30px;
+}
+
+.app-body .current .current-day .more-info .pressure-humidity p {
+  font-size: 23px;
+  letter-spacing: 1px;
+}
+
+.app-body .current .current-day .more-info .pressure-humidity p span {
+  font-weight: bold;
+  font-style: italic;
+  font-size: 28px;
+  letter-spacing: 0.5px;
+}
+
+.app-body .other-days {
+  position: relative;
+  padding: 20px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.app-body .other-days .other-day {
+  padding: 10px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.app-body .other-days .other-day .day {
+  width: 27%;
+  font-size: 21px;
+  text-transform: uppercase;
+  font-weight: normal;
+  letter-spacing: 0.8px;
+  text-align: left;
+}
+
+.app-body .other-days .other-day .other-min-max {
+  text-align: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 30%;
+}
+
+.app-body .other-days .other-day .other-min-max p {
+  font-size: 21px;
+  letter-spacing: 0.8px;
+}
+
+@media only screen and (max-width: 1024px) {
+  .preload .preload-text {
+    font-size: 26px;
+  }
+  .preload .close-preload {
+    font-size: 17px;
+  }
+  .app-body {
+    width: 980px;
+  }
+  .app-body .current .current-day .city-name {
+    font-size: 32px;
+  }
+  .app-body .current .current-day .temp {
+    font-size: 53px;
+  }
+  .app-body .current .current-day .min-max p {
+    font-size: 23px;
+  }
+  .app-body .current .current-day .min-max p span {
+    font-size: 32px;
+  }
+  .app-body .current .current-day .desc-and-icon .weather-desc {
+    font-size: 23px;
+  }
+  .app-body .current .current-day .desc-and-icon .weather-icon {
+    width: 200px;
+  }
+  .app-body .current .current-day .more-info .sunrise-sunset p {
+    font-size: 21px;
+  }
+  .app-body .current .current-day .more-info .sunrise-sunset p span {
+    font-size: 27px;
+  }
+  .app-body .current .current-day .more-info .pressure-humidity p {
+    font-size: 21px;
+  }
+  .app-body .current .current-day .more-info .pressure-humidity p span {
+    font-size: 27px;
+  }
+  .app-body .other-days {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .app-body .other-days .other-day .day {
+    font-size: 21px;
+  }
+  .app-body .other-days .other-day .other-min-max p {
+    font-size: 21px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .app-body {
+    width: 900px;
+  }
+  .app-body .current .search-bar input {
+    width: 280px;
+  }
+  .app-body .current .current-day .city-name {
+    font-size: 31px;
+  }
+  .app-body .current .current-day .temp {
+    font-size: 50px;
+  }
+  .app-body .current .current-day .min-max p {
+    font-size: 20px;
+  }
+  .app-body .current .current-day .min-max p span {
+    font-size: 30px;
+  }
+  .app-body .current .current-day .desc-and-icon .weather-desc {
+    font-size: 21px;
+  }
+  .app-body .current .current-day .desc-and-icon .weather-icon {
+    width: 150px;
+  }
+  .app-body .current .current-day .more-info .sunrise-sunset p {
+    font-size: 18px;
+  }
+  .app-body .current .current-day .more-info .sunrise-sunset p span {
+    font-size: 24px;
+  }
+  .app-body .current .current-day .more-info .pressure-humidity p {
+    font-size: 18px;
+  }
+  .app-body .current .current-day .more-info .pressure-humidity p span {
+    font-size: 24px;
+  }
+  .app-body .other-days .other-day .day {
+    font-size: 20px;
+  }
+  .app-body .other-days .other-day .weather-icon {
+    width: 91px;
+  }
+  .app-body .other-days .other-day .other-min-max p {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .app-body {
+    width: 850px;
+  }
+}
+
+@media only screen and (max-width: 870px) {
+  .app-body {
+    width: 820px;
+  }
+  .app-body .current .search-bar input {
+    width: 280px;
+  }
+  .app-body .current .current-day .city-name {
+    font-size: 30px;
+  }
+  .app-body .current .current-day .temp {
+    font-size: 47px;
+  }
+  .app-body .current .current-day .min-max p {
+    font-size: 19px;
+  }
+  .app-body .current .current-day .min-max p span {
+    font-size: 28px;
+  }
+  .app-body .current .current-day .weather-desc {
+    font-size: 21px;
+  }
+  .app-body .current .current-day .more-info .sunrise-sunset p {
+    font-size: 18px;
+  }
+  .app-body .current .current-day .more-info .sunrise-sunset p span {
+    font-size: 22px;
+  }
+  .app-body .current .current-day .more-info .pressure-humidity p {
+    font-size: 18px;
+  }
+  .app-body .current .current-day .more-info .pressure-humidity p span {
+    font-size: 22px;
+  }
+  .app-body .other-days .other-day .day {
+    font-size: 19px;
+  }
+  .app-body .other-days .other-day .weather-icon {
+    width: 90px;
+  }
+  .app-body .other-days .other-day .other-min-max p {
+    font-size: 19px;
+  }
+}
+
+@media only screen and (max-width: 830px) {
+  .app-body {
+    width: 765px;
+  }
+  .app-body .current .search-bar input {
+    width: 230px;
+  }
+  .app-body .current .current-day .city-name {
+    font-size: 30px;
+  }
+  .app-body .current .current-day .temp {
+    font-size: 43px;
+  }
+  .app-body .current .current-day .min-max p {
+    font-size: 17px;
+  }
+  .app-body .current .current-day .min-max p span {
+    font-size: 25px;
+  }
+  .app-body .current .current-day .desc-and-icon {
+    height: 230px;
+  }
+  .app-body .current .current-day .desc-and-icon .weather-desc {
+    font-size: 20px;
+  }
+  .app-body .current .current-day .desc-and-icon .weather-icon {
+    width: 150px;
+  }
+  .app-body .current .current-day .more-info .sunrise-sunset p {
+    font-size: 17px;
+  }
+  .app-body .current .current-day .more-info .sunrise-sunset p span {
+    font-size: 20px;
+  }
+  .app-body .current .current-day .more-info .pressure-humidity p {
+    font-size: 17px;
+  }
+  .app-body .current .current-day .more-info .pressure-humidity p span {
+    font-size: 20px;
+  }
+  .app-body .other-days .other-day .day {
+    font-size: 19px;
+  }
+  .app-body .other-days .other-day .weather-icon {
+    width: 86px;
+  }
+  .app-body .other-days .other-day .other-min-max p {
+    font-size: 19px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .app-body {
+    width: 750px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .preload .preload-text {
+    font-size: 24px;
+    padding: 0 20px;
+  }
+  .preload .close-preload {
+    font-size: 16px;
+  }
+  .app-body {
+    width: 500px;
+    height: 700px;
+    display: block;
+  }
+  .app-body .current {
+    width: 100%;
+  }
+  .app-body .current .search-bar {
+    border-right: none;
+  }
+  .app-body .current .search-bar input {
+    width: 270px;
+  }
+  .app-body .current .current-day {
+    border-right: none;
+  }
+  .app-body .current .current-day .city-name {
+    font-size: 28px;
+  }
+  .app-body .current .current-day .temp {
+    font-size: 43px;
+  }
+  .app-body .current .current-day .min-max p {
+    font-size: 19px;
+  }
+  .app-body .current .current-day .min-max p span {
+    font-size: 25px;
+  }
+  .app-body .current .current-day .desc-and-icon {
+    height: 230px;
+  }
+  .app-body .current .current-day .desc-and-icon .weather-desc {
+    font-size: 20px;
+  }
+  .app-body .current .current-day .desc-and-icon .weather-icon {
+    width: 150px;
+  }
+  .app-body .current .current-day .more-info {
+    height: 200px;
+    border-bottom: 2px solid rgba(255, 253, 253, 0.5);
+  }
+  .app-body .current .current-day .more-info .sunrise-sunset p {
+    font-size: 19px;
+  }
+  .app-body .current .current-day .more-info .sunrise-sunset p span {
+    font-size: 23px;
+  }
+  .app-body .current .current-day .more-info .pressure-humidity p {
+    font-size: 19px;
+  }
+  .app-body .current .current-day .more-info .pressure-humidity p span {
+    font-size: 23px;
+  }
+  .app-body .other-days {
+    width: 100%;
+    padding: 11px;
+    border-left: none;
+  }
+  .app-body .other-days .other-day .day {
+    font-size: 19px;
+  }
+  .app-body .other-days .other-day .weather-icon {
+    width: 75px;
+  }
+  .app-body .other-days .other-day .other-min-max p {
+    font-size: 19px;
+  }
+}
+
+@media only screen and (max-width: 530px) {
+  .preload .preload-text {
+    font-size: 21px;
+  }
+  .preload .close-preload {
+    font-size: 15px;
+  }
+  .app-body {
+    width: 450px;
+  }
+  .app-body .current .current-day .city-name {
+    font-size: 25px;
+  }
+  .app-body .current .current-day .temp {
+    font-size: 40px;
+  }
+  .app-body .current .current-day .min-max p {
+    font-size: 18px;
+  }
+  .app-body .current .current-day .min-max p span {
+    font-size: 24px;
+  }
+  .app-body .current .current-day .desc-and-icon {
+    height: 200px;
+  }
+  .app-body .current .current-day .desc-and-icon .weather-desc {
+    font-size: 20px;
+  }
+  .app-body .current .current-day .desc-and-icon .weather-icon {
+    width: 150px;
+  }
+  .app-body .current .current-day .more-info {
+    height: 200px;
+  }
+  .app-body .current .current-day .more-info .sunrise-sunset p {
+    font-size: 18px;
+  }
+  .app-body .current .current-day .more-info .sunrise-sunset p span {
+    font-size: 22px;
+  }
+  .app-body .current .current-day .more-info .pressure-humidity p {
+    font-size: 18px;
+  }
+  .app-body .current .current-day .more-info .pressure-humidity p span {
+    font-size: 22px;
+  }
+  .app-body .other-days {
+    width: 100%;
+  }
+  .app-body .other-days .other-day .day {
+    font-size: 18px;
+  }
+  .app-body .other-days .other-day .weather-icon {
+    width: 70px;
+  }
+  .app-body .other-days .other-day .other-min-max p {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (max-width: 465px) {
+  .app-body {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 0;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    border-top: 2px solid rgba(255, 253, 253, 0.5);
+    border-bottom: 2px solid rgba(255, 253, 253, 0.5);
+  }
+  .app-body .current {
+    width: 100%;
+  }
+  .app-body .current .search-bar input {
+    width: 230px;
+  }
+  .app-body .current .current-day .city-name {
+    font-size: 25px;
+  }
+  .app-body .current .current-day .temp {
+    font-size: 38px;
+  }
+  .app-body .current .current-day .min-max p {
+    font-size: 17px;
+  }
+  .app-body .current .current-day .min-max p span {
+    font-size: 23px;
+  }
+  .app-body .current .current-day .desc-and-icon .weather-desc {
+    font-size: 20px;
+  }
+  .app-body .current .current-day .desc-and-icon .weather-icon {
+    width: 150px;
+  }
+  .app-body .current .current-day .more-info .sunrise-sunset {
+    padding: 15px 20px;
+  }
+  .app-body .current .current-day .more-info .sunrise-sunset p {
+    font-size: 17px;
+  }
+  .app-body .current .current-day .more-info .sunrise-sunset p span {
+    font-size: 20px;
+  }
+  .app-body .current .current-day .more-info .pressure-humidity {
+    padding: 15px 20px;
+  }
+  .app-body .current .current-day .more-info .pressure-humidity p {
+    font-size: 17px;
+  }
+  .app-body .current .current-day .more-info .pressure-humidity p span {
+    font-size: 20px;
+  }
+  .app-body .other-days {
+    width: 100%;
+    padding: 20px 0 20px 0;
+  }
+  .app-body .other-days .other-day .day {
+    font-size: 17px;
+  }
+  .app-body .other-days .other-day .weather-icon {
+    width: 60px;
+  }
+  .app-body .other-days .other-day .other-min-max p {
+    font-size: 17px;
+  }
+}
+
+body {
+  background-color: #5c99b1;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: "Source Sans Pro";
+}
+/*# sourceMappingURL=style.css.map */

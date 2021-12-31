@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Shortcut icon -->
+    <link rel="shortcut icon" href="img/icon.ico">
+
+    <!-- Title and CSS -->
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Preload Text -->
+    <div class="preload">
+      <p class="preload-text">Loading data, please wait...</p>
+      <button class="close-preload">Go back</button>
+    </div>
+    <!-- Application body -->
+    <div class="app-body">
+      <!-- Search bar -->
+      <div class="current">
+        <div class="search-bar">
+          <input type="text" name="" id="text" placeholder="Search for city" />
+          <a href="#" id="search"><i class="fas fa-search" ></i></a>
+        </div>
+        <!-- Current day -->
+        <div class="current-day">
+          <!-- <h2 class="city-name">Trebinje</h2>
+          <h3 class="temp">22°C</h3>
+          <div class="min-max">
+            <p class="min">Low: <span>15°C</span></p>
+            <p class="max">High: <span>25°C</span></p>
+          </div>
+          <p class="weather-desc">Oblacno</p>
+          <img src="http://openweathermap.org/img/wn/${
+          data.current.weather[0].icon
+          }@4x.png " class="weather-icon" alt="icon">
+          <div class="sunrise-sunset">
+            <p class="sunrise">Sunrise: <span>06:00</span></p>
+            <p class="sunset">Sunset: <span>19:00</span></p>
+          </div>
+          <div class="pressure-humidity">
+            <p class="pressure">Pressure: <span>1013 mbar</span></p>
+            <p class="humidity">Humidity: <span>45%</span></p>
+          </div> -->
+        </div>
+      </div>
+      
+      <!-- Other days -->
+
+      <div class="other-days">
+         <!-- <div class="other-day">
+          <h5 class="day">Monday</h5>
+          <img src="" class="weather-icon" alt="icon">
+          <div class="other-min-max">
+            <p class="min">L:15°C</p>
+            <p class="max">H:25°C</p>
+          </div>
+        </div> -->
+
+        
+      </div>
+
+    <!-- SCRIPTS -->
+
+    <!-- Moment JS -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
+      integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- Font Awsome -->
+    <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js "></script>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+  </body>
+</html>

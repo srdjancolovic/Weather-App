@@ -1,0 +1,137 @@
+//PRELOAD DIV FONT SIZES
+$preloadTextXl: 30px;
+$preloadTextMax1024: 26px;
+$preloadTextMax767: 24px;
+$preloadTextMax530: 21px;
+
+$closePreloadTextXl: 18px;
+$closePreloadTextMax1024: 17px;
+$closePreloadTextMax767: 16px;
+$closePreloadTextMax530: 15px;
+
+//////////////COLORS
+$appBodyBgColor: rgba(0, 0, 0, 0.3);
+$appBorderColor: rgba(255, 253, 253, 0.5);
+$appInputBg: rgba(255, 254, 254, 0.3);
+$appInputHoverBg: rgba(255, 254, 254, 0.5);
+
+//////////////// >1024
+
+$searchIconXl: 25px;
+
+$cityNameXl: 33px;
+$currTempXl: 55px;
+$minMaxpXl: 25px;
+$spanMinMaxXl: 35px;
+
+$weatherDescXl: 25px;
+
+$moreInfoPXl: 23px;
+$moreInfoSpanXl: 28px;
+
+$dayAndLoHiXl: 21px;
+//////////////////Max 1024
+$cityNameMax1024: 32px;
+$currTempMax1024: 53px;
+$minMaxpMax1024: 23px;
+$spanMinMaxMax1024: 32px;
+
+$weatherDescMax1024: 23px;
+$moreInfoPMax1024: 21px;
+$moreInfoSpanMax1024: 27px;
+
+$dayAndLoHiMax1024: 21px;
+
+//////////////////////Max 992
+$cityNameMax992: 31px;
+$currTempMax992: 50px;
+$minMaxpMax992: 20px;
+$spanMinMaxMax992: 30px;
+
+$weatherDescMax992: 21px;
+$moreInfoPMax992: 18px;
+$moreInfoSpanMax992: 24px;
+
+$dayAndLoHiMax992: 20px;
+
+///////////////////////
+//Max 870
+$cityNameMax870: 30px;
+$currTempMax870: 47px;
+$minMaxpMax870: 19px;
+$spanMinMaxMax870: 28px;
+
+$weatherDescMax870: 21px;
+$moreInfoPMax870: 18px;
+$moreInfoSpanMax870: 22px;
+
+$dayAndLoHiMax870: 19px;
+
+////////////////////////
+//Max 830
+$cityNameMax830: 30px;
+$currTempMax830: 43px;
+$minMaxpMax830: 17px;
+$spanMinMaxMax830: 25px;
+
+$weatherDescMax830: 20px;
+$moreInfoPMax830: 17px;
+$moreInfoSpanMax830: 20px;
+
+$dayAndLoHiMax830: 19px;
+
+/////////////////////////
+//Max 767
+$cityNameMax767: 28px;
+$currTempMax767: 43px;
+$minMaxpMax767: 19px;
+$spanMinMaxMax767: 25px;
+
+$weatherDescMax767: 20px;
+$moreInfoPMax767: 19px;
+$moreInfoSpanMax767: 23px;
+
+$dayAndLoHiMax767: 19px;
+
+///////////////////////
+//Max 530
+$cityNameMax530: 25px;
+$currTempMax530: 40px;
+$minMaxpMax530: 18px;
+$spanMinMaxMax530: 24px;
+
+$weatherDescMax530: 20px;
+$moreInfoPMax530: 18px;
+$moreInfoSpanMax530: 22px;
+
+$dayAndLoHiMax530: 18px;
+
+/////////////////
+//Max 465
+$cityNameMax465: 25px;
+$currTempMax465: 38px;
+$minMaxpMax465: 17px;
+$spanMinMaxMax465: 23px;
+
+$weatherDescMax465: 20px;
+$moreInfoPMax465: 17px;
+$moreInfoSpanMax465: 20px;
+
+$dayAndLoHiMax465: 17px;
+
+//////////////MIXIN
+@mixin moreInfoDiv {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 30px;
+  p {
+    font-size: $moreInfoPXl;
+    letter-spacing: 1px;
+    span {
+      font-weight: bold;
+      font-style: italic;
+      font-size: $moreInfoSpanXl;
+      letter-spacing: 0.5px;
+    }
+  }
+}

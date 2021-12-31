@@ -1,0 +1,211 @@
+//PRELOAD TEXT
+.preload {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  z-index: 3000;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s all;
+  text-align: center;
+  .preload-text {
+    text-transform: uppercase;
+    font-size: $preloadTextXl;
+  }
+  .close-preload {
+    margin-top: 30px;
+    font-size: 25px;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: 1s ease;
+    opacity: 0;
+    background: rgb(0, 0, 0);
+    color: white;
+    cursor: pointer;
+    &:focus {
+      outline: none;
+    }
+    &:hover {
+      transform: scale(0.95);
+    }
+  }
+}
+
+//APP BODY
+.app-body {
+  background: $appBodyBgColor;
+  text-align: center;
+  width: 1000px;
+  overflow-x: hidden;
+  border: 3px solid $appBorderColor;
+  border-radius: 10px;
+  color: white;
+  display: flex;
+  z-index: 1000;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  //CURRENT DAY DIV
+  .current {
+    width: 50%;
+    //Search bar
+    .search-bar {
+      padding-top: 40px;
+      margin: auto;
+      position: relative;
+      z-index: 2000;
+      border-right: 2px solid $appBorderColor;
+      //Search bar input
+      input {
+        background: $appInputBg;
+        width: 300px;
+        height: 35px;
+        border: white;
+        border-radius: 10px;
+        padding: 0 20px;
+        text-align: center;
+        text-transform: uppercase;
+        font-style: italic;
+        letter-spacing: 0.5px;
+        color: white;
+        transition: 0.5s all;
+
+        &::placeholder {
+          color: white;
+        }
+
+        &:focus {
+          outline: none;
+        }
+        &:hover {
+          background: $appInputHoverBg;
+        }
+      }
+      //Search icon
+      .svg-inline--fa {
+        position: absolute;
+        top: 42.5px;
+        color: white;
+        margin-left: 10px;
+        font-size: $searchIconXl;
+        cursor: pointer;
+        transition: 0.5s ease;
+
+        &:hover {
+          transform: scale(0.85);
+        }
+      }
+    }
+    //Current day
+    .current-day {
+      padding-top: 30px;
+      border-right: 2px solid $appBorderColor;
+
+      //City name
+      .city-name {
+        text-transform: uppercase;
+        font-size: $cityNameXl;
+        font-style: bold;
+        letter-spacing: 1px;
+      }
+      //Current temperature
+      .temp {
+        padding-top: 15px;
+        font-size: $currTempXl;
+        font-style: italic;
+        letter-spacing: 1px;
+      }
+      //Min and max temperature
+      .min-max {
+        display: flex;
+        justify-content: space-around;
+        padding: 15px 30px;
+        margin: auto;
+        border-bottom: 2px solid $appBorderColor;
+
+        p {
+          font-size: $minMaxpXl;
+          letter-spacing: 1px;
+          padding-top: 20px;
+          padding-bottom: 30px;
+          span {
+            font-weight: bold;
+            font-style: italic;
+            font-size: $spanMinMaxXl;
+            letter-spacing: 0.5px;
+          }
+        }
+      }
+      //Short weather description with icon
+      .desc-and-icon {
+        padding-bottom: 30px;
+        .weather-desc {
+          padding-top: 30px;
+          text-transform: uppercase;
+          font-size: $weatherDescXl;
+          letter-spacing: 0.7px;
+        }
+      }
+      //Sunset/sunrise/pressure/humidity
+      .more-info {
+        height: 240px;
+        display: flex;
+        flex-direction: column;
+        border-top: 2px solid $appBorderColor;
+        justify-content: center;
+        .sunrise-sunset {
+          @include moreInfoDiv;
+          p {
+            span {
+              text-transform: uppercase;
+            }
+          }
+        }
+        //Pressure/humidity
+        .pressure-humidity {
+          @include moreInfoDiv;
+        }
+      }
+    }
+  }
+  // 7 days forecast div
+  .other-days {
+    position: relative;
+    padding: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    //Specific day
+    .other-day {
+      padding: 10px 0;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      //Day name
+      .day {
+        width: 27%;
+        font-size: $dayAndLoHiXl;
+        text-transform: uppercase;
+        font-weight: normal;
+        letter-spacing: 0.8px;
+        text-align: left;
+      }
+      //Min and max temerature of each day
+      .other-min-max {
+        text-align: left;
+        display: flex;
+        justify-content: space-between;
+        width: 30%;
+        p {
+          font-size: $dayAndLoHiXl;
+          letter-spacing: 0.8px;
+        }
+      }
+    }
+  }
+}

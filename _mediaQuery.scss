@@ -1,0 +1,534 @@
+@media only screen and (max-width: 1024px) {
+  .preload {
+    .preload-text {
+      font-size: $preloadTextMax1024;
+    }
+    .close-preload {
+      font-size: $closePreloadTextMax1024;
+    }
+  }
+  .app-body {
+    width: 980px;
+    .current {
+      .current-day {
+        .city-name {
+          font-size: $cityNameMax1024;
+        }
+        .temp {
+          font-size: $currTempMax1024;
+        }
+        .min-max {
+          p {
+            font-size: $minMaxpMax1024;
+            span {
+              font-size: $spanMinMaxMax1024;
+            }
+          }
+        }
+        .desc-and-icon {
+          .weather-desc {
+            font-size: $weatherDescMax1024;
+          }
+          .weather-icon {
+            width: 200px;
+          }
+        }
+        .more-info {
+          .sunrise-sunset {
+            p {
+              font-size: $moreInfoPMax1024;
+              span {
+                font-size: $moreInfoSpanMax1024;
+              }
+            }
+          }
+          .pressure-humidity {
+            p {
+              font-size: $moreInfoPMax1024;
+              span {
+                font-size: $moreInfoSpanMax1024;
+              }
+            }
+          }
+        }
+      }
+    }
+    .other-days {
+      margin-top: 0;
+      margin-bottom: 0;
+      .other-day {
+        .day {
+          font-size: $dayAndLoHiMax1024;
+        }
+        .other-min-max {
+          p {
+            font-size: $dayAndLoHiMax1024;
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 992px) {
+  .app-body {
+    width: 900px;
+    .current {
+      .search-bar {
+        input {
+          width: 280px;
+        }
+      }
+      .current-day {
+        .city-name {
+          font-size: $cityNameMax992;
+        }
+        .temp {
+          font-size: $currTempMax992;
+        }
+        .min-max {
+          p {
+            font-size: $minMaxpMax992;
+            span {
+              font-size: $spanMinMaxMax992;
+            }
+          }
+        }
+        .desc-and-icon {
+          .weather-desc {
+            font-size: $weatherDescMax992;
+          }
+          .weather-icon {
+            width: 150px;
+          }
+        }
+        .more-info {
+          .sunrise-sunset {
+            p {
+              font-size: $moreInfoPMax992;
+              span {
+                font-size: $moreInfoSpanMax992;
+              }
+            }
+          }
+          .pressure-humidity {
+            p {
+              font-size: $moreInfoPMax992;
+              span {
+                font-size: $moreInfoSpanMax992;
+              }
+            }
+          }
+        }
+      }
+    }
+    .other-days {
+      .other-day {
+        .day {
+          font-size: $dayAndLoHiMax992;
+        }
+        .weather-icon {
+          width: 91px;
+        }
+        .other-min-max {
+          p {
+            font-size: $dayAndLoHiMax992;
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 950px) {
+  .app-body {
+    width: 850px;
+  }
+}
+@media only screen and (max-width: 870px) {
+  .app-body {
+    width: 820px;
+    .current {
+      .search-bar {
+        input {
+          width: 280px;
+        }
+      }
+      .current-day {
+        .city-name {
+          font-size: $cityNameMax870;
+        }
+        .temp {
+          font-size: $currTempMax870;
+        }
+        .min-max {
+          p {
+            font-size: $minMaxpMax870;
+            span {
+              font-size: $spanMinMaxMax870;
+            }
+          }
+        }
+        .weather-desc {
+          font-size: $weatherDescMax870;
+        }
+        .more-info {
+          .sunrise-sunset {
+            p {
+              font-size: $moreInfoPMax870;
+              span {
+                font-size: $moreInfoSpanMax870;
+              }
+            }
+          }
+          .pressure-humidity {
+            p {
+              font-size: $moreInfoPMax870;
+              span {
+                font-size: $moreInfoSpanMax870;
+              }
+            }
+          }
+        }
+      }
+    }
+    .other-days {
+      .other-day {
+        .day {
+          font-size: $dayAndLoHiMax870;
+        }
+        .weather-icon {
+          width: 90px;
+        }
+        .other-min-max {
+          p {
+            font-size: $dayAndLoHiMax870;
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 830px) {
+  .app-body {
+    width: 765px;
+    .current {
+      .search-bar {
+        input {
+          width: 230px;
+        }
+      }
+      .current-day {
+        .city-name {
+          font-size: $cityNameMax830;
+        }
+        .temp {
+          font-size: $currTempMax830;
+        }
+        .min-max {
+          p {
+            font-size: $minMaxpMax830;
+            span {
+              font-size: $spanMinMaxMax830;
+            }
+          }
+        }
+        .desc-and-icon {
+          height: 230px;
+          .weather-desc {
+            font-size: $weatherDescMax830;
+          }
+          .weather-icon {
+            width: 150px;
+          }
+        }
+        .more-info {
+          .sunrise-sunset {
+            p {
+              font-size: $moreInfoPMax830;
+              span {
+                font-size: $moreInfoSpanMax830;
+              }
+            }
+          }
+          .pressure-humidity {
+            p {
+              font-size: $moreInfoPMax830;
+              span {
+                font-size: $moreInfoSpanMax830;
+              }
+            }
+          }
+        }
+      }
+    }
+    .other-days {
+      .other-day {
+        .day {
+          font-size: $dayAndLoHiMax830;
+        }
+        .weather-icon {
+          width: 86px;
+        }
+        .other-min-max {
+          p {
+            font-size: $dayAndLoHiMax830;
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 800px) {
+  .app-body {
+    width: 750px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .preload {
+    .preload-text {
+      font-size: $preloadTextMax767;
+      padding: 0 20px;
+    }
+    .close-preload {
+      font-size: $closePreloadTextMax767;
+    }
+  }
+  .app-body {
+    width: 500px;
+    height: 700px;
+    display: block;
+    .current {
+      width: 100%;
+      .search-bar {
+        border-right: none;
+        input {
+          width: 270px;
+        }
+      }
+      .current-day {
+        border-right: none;
+
+        .city-name {
+          font-size: $cityNameMax767;
+        }
+        .temp {
+          font-size: $currTempMax767;
+        }
+        .min-max {
+          p {
+            font-size: $minMaxpMax767;
+            span {
+              font-size: $spanMinMaxMax767;
+            }
+          }
+        }
+        .desc-and-icon {
+          height: 230px;
+          .weather-desc {
+            font-size: $weatherDescMax767;
+          }
+          .weather-icon {
+            width: 150px;
+          }
+        }
+        .more-info {
+          height: 200px;
+
+          border-bottom: 2px solid $appBorderColor;
+          .sunrise-sunset {
+            p {
+              font-size: $moreInfoPMax767;
+              span {
+                font-size: $moreInfoSpanMax767;
+              }
+            }
+          }
+          .pressure-humidity {
+            p {
+              font-size: $moreInfoPMax767;
+              span {
+                font-size: $moreInfoSpanMax767;
+              }
+            }
+          }
+        }
+      }
+    }
+    .other-days {
+      width: 100%;
+      padding: 11px;
+      border-left: none;
+      .other-day {
+        .day {
+          font-size: $dayAndLoHiMax767;
+        }
+        .weather-icon {
+          width: 75px;
+        }
+        .other-min-max {
+          p {
+            font-size: $dayAndLoHiMax767;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 530px) {
+  .preload {
+    .preload-text {
+      font-size: $preloadTextMax530;
+    }
+    .close-preload {
+      font-size: $closePreloadTextMax530;
+    }
+  }
+  .app-body {
+    width: 450px;
+    .current {
+      .current-day {
+        .city-name {
+          font-size: $cityNameMax530;
+        }
+        .temp {
+          font-size: $currTempMax530;
+        }
+        .min-max {
+          p {
+            font-size: $minMaxpMax530;
+            span {
+              font-size: $spanMinMaxMax530;
+            }
+          }
+        }
+        .desc-and-icon {
+          height: 200px;
+          .weather-desc {
+            font-size: $weatherDescMax530;
+          }
+          .weather-icon {
+            width: 150px;
+          }
+        }
+        .more-info {
+          height: 200px;
+          .sunrise-sunset {
+            p {
+              font-size: $moreInfoPMax530;
+              span {
+                font-size: $moreInfoSpanMax530;
+              }
+            }
+          }
+          .pressure-humidity {
+            p {
+              font-size: $moreInfoPMax530;
+              span {
+                font-size: $moreInfoSpanMax530;
+              }
+            }
+          }
+        }
+      }
+    }
+    .other-days {
+      width: 100%;
+      .other-day {
+        .day {
+          font-size: $dayAndLoHiMax530;
+        }
+        .weather-icon {
+          width: 70px;
+        }
+        .other-min-max {
+          p {
+            font-size: $dayAndLoHiMax530;
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 465px) {
+  .app-body {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 0;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    border-top: 2px solid $appBorderColor;
+    border-bottom: 2px solid $appBorderColor;
+    .current {
+      width: 100%;
+      .search-bar {
+        input {
+          width: 230px;
+        }
+      }
+      .current-day {
+        .city-name {
+          font-size: $cityNameMax465;
+        }
+        .temp {
+          font-size: $currTempMax465;
+        }
+        .min-max {
+          p {
+            font-size: $minMaxpMax465;
+            span {
+              font-size: $spanMinMaxMax465;
+            }
+          }
+        }
+        .desc-and-icon {
+          .weather-desc {
+            font-size: $weatherDescMax465;
+          }
+          .weather-icon {
+            width: 150px;
+          }
+        }
+        .more-info {
+          .sunrise-sunset {
+            padding: 15px 20px;
+            p {
+              font-size: $moreInfoPMax465;
+              span {
+                font-size: $moreInfoSpanMax465;
+              }
+            }
+          }
+          .pressure-humidity {
+            padding: 15px 20px;
+
+            p {
+              font-size: $moreInfoPMax465;
+              span {
+                font-size: $moreInfoSpanMax465;
+              }
+            }
+          }
+        }
+      }
+    }
+    .other-days {
+      width: 100%;
+      padding: 20px 0 20px 0;
+
+      .other-day {
+        .day {
+          font-size: $dayAndLoHiMax465;
+        }
+        .weather-icon {
+          width: 60px;
+        }
+        .other-min-max {
+          p {
+            font-size: $dayAndLoHiMax465;
+          }
+        }
+      }
+    }
+  }
+}
